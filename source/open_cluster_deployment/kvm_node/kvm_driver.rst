@@ -275,7 +275,7 @@ For Disks and NICs, if the guest OS is a Linux flavor, the guest needs to be exp
 Enabling QEMU Guest Agent
 -------------------------
 
-QEMU Guest Agent allows the communication of some actions with the guest OS. This agent uses a virtio serial connection to send and receive commands. One of the interesting actions is that it allows you to freeze the filesystem before doing an snapshot. This way the snapshot won't contain half written data. Filesystem freeze will only be used  with ``CEPH`` and ``qcow2`` storage drivers.
+QEMU Guest Agent allows the communication of some actions with the guest OS. This agent uses a virtio serial connection to send and receive commands. One of the interesting actions is that it allows you to freeze the filesystem before doing an snapshot. This way the snapshot won't contain half written data. Filesystem freeze will only be used  with ``CEPH`` and ``shared`` storage drivers.
 
 The agent package needed in the Guest OS is available in most distributions. It's called ``qemu-guest-agent`` in most of them. If you need more information you can follow these links:
 

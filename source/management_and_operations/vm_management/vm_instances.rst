@@ -381,10 +381,10 @@ Disk snapshots are managed with the following commands:
 
 ``disk-snapshot-create`` can take place when the VM is in ``RUNNING`` state, provided that the drivers support it, while ``disk-snapshot-revert`` requires the VM to be ``POWEROFF`` or ``SUSPENDED``. Live snapshots are only supported for some hypervisors and storage drivers:
 
-- Hypervisor ``VM_MAD=kvm`` combined with ``TM_MAD=qcow2`` datastores. In this case OpenNebula will request that the hypervisor executes ``virsh snapshot-create``.
+- Hypervisor ``VM_MAD=kvm`` combined with ``TM_MAD=shared`` datastores. In this case OpenNebula will request that the hypervisor executes ``virsh snapshot-create``.
 - Hypervisor ``VM_MAD=kvm`` with Ceph datastores (``TM_MAD=ceph``). In this case OpenNebula will initially create the snapshots as Ceph snapshots in the current volume.
 
-With these combinations (CEPH and qcow2 datastores and KVM hypervisor) you can :ref:`enable QEMU Guest Agent <enabling_qemu_guest_agent>`. With this agent enabled the filesystem will be frozen while the snapshot is being done.
+With these combinations (CEPH and shared datastores and KVM hypervisor) you can :ref:`enable QEMU Guest Agent <enabling_qemu_guest_agent>`. With this agent enabled the filesystem will be frozen while the snapshot is being done.
 
 .. warning:: OpenNebula will not automatically handle live ``disk-snapshot-create`` and ``disk-snapshot-revert`` operations for VMs in ``RUNNING`` if the virtualization driver do not support it (check the limitations of the corresponding virtualization driver guide to know if this feature is available for your hypervisor). In this case the user needs to suspend or poweroff the VM before creating the snapshot.
 

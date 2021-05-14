@@ -307,7 +307,7 @@ Certain types of TM can be used in so called *mixed mode* and allow different ty
 The following combinations are supported by default:
 
 - **CEPH** + **SSH** described in :ref:`Ceph SSH mode <ceph-ssh-mode>`
-- **Qcow2/shared** + **SSH** described in :ref:`Qcow2/shared SSH mode <shared-ssh-mode>`
+- **shared** + **SSH** described in :ref:`shared SSH mode <shared-ssh-mode>`
 
 The support in oned is generic, in a *mixed mode* every TM action (such as ``clone`` or ``delete``) is suffixed with the driver name of the system DS in use. For example, an action like ``clone.ssh`` is actually invoked in CEPH + SSH mode. The driver first tries to find the complete action script, including the system DS suffix (e.g. ``ceph/clone.ssh``) and only if that does not exist fallbacks to the default (``ceph/clone``).
 
@@ -533,7 +533,7 @@ Decoded Example
                 <OTHER_A>0</OTHER_A>
             </PERMISSIONS>
             <DS_MAD><![CDATA[-]]></DS_MAD>
-            <TM_MAD><![CDATA[qcow2]]></TM_MAD>
+            <TM_MAD><![CDATA[shared]]></TM_MAD>
             <BASE_PATH><![CDATA[/var/lib/one//datastores/0]]></BASE_PATH>
             <TYPE>1</TYPE>
             <DISK_TYPE>0</DISK_TYPE>
@@ -549,7 +549,7 @@ Decoded Example
                 <ALLOW_ORPHANS><![CDATA[NO]]></ALLOW_ORPHANS>
                 <DS_MIGRATE><![CDATA[YES]]></DS_MIGRATE>
                 <SHARED><![CDATA[YES]]></SHARED>
-                <TM_MAD><![CDATA[qcow2]]></TM_MAD>
+                <TM_MAD><![CDATA[shared]]></TM_MAD>
                 <TYPE><![CDATA[SYSTEM_DS]]></TYPE>
             </TEMPLATE>
         </DATASTORE>

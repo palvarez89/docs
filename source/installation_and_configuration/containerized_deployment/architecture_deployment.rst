@@ -35,7 +35,7 @@ You need a physical or virtual host with a recommended operating system, one of 
    **Unsupported Features**:
 
    - federated and HA deployments,
-   - shared datastores (NFS, qcow2, Ceph, LVM, ...), only SSH-based available
+   - shared datastores (NFS, Ceph, LVM, ...), only SSH-based available
    - migration of existing Front-end deployment installed from packages into containers,
    - in **unprivileged mode** - Exports from the following Marketplaces - :ref:`Docker Hub <market_dh>`, :ref:`Linux Containers <market_linux_container>`, :ref:`TurnKey Linux <market_turnkey_linux>`,
    - in **unprivileged mode** - :ref:`Creating an image based on a Dockerfile <dockerfile>`,

@@ -468,7 +468,7 @@ Sample configuration:
 
     TM_MAD = [
         EXECUTABLE = "one_tm",
-        ARGUMENTS = "-t 15 -d dummy,lvm,shared,fs_lvm,qcow2,ssh,ceph,dev,vcenter,iscsi_libvirt"
+        ARGUMENTS = "-t 15 -d dummy,lvm,shared,fs_lvm,ssh,ceph,dev,vcenter,iscsi_libvirt"
     ]
 
 The configuration for each driver is defined in the ``TM_MAD_CONF`` section. These values are used when creating a new datastore and should not be modified since they define the datastore behavior.
